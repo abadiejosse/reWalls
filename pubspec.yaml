@@ -1,5 +1,5 @@
 name: re_walls
-description: Wallpapers from reddit.
+description: Street art UY.
 
 version: 1.0.0+1
 
@@ -21,11 +21,16 @@ dependencies:
   permission_handler: 7.0.0
   fluttertoast: 8.0.6
   url_launcher: 6.0.3
-
+  google_maps_flutter_web: ^0.4.0+3
+  google_maps_flutter: ^2.2.1
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+dependency_overrides:
+  platform: ^3.1.0
+  
 flutter:
   uses-material-design: true
 

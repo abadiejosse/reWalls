@@ -14,7 +14,7 @@ void main() {
         create: (_) => ThemeNotifier(themes[theme]),
         child: MaterialApp(
           theme: themes[theme],
-          title: 'reWalls',
+          title: 'StreetArtUY',
           debugShowCheckedModeBanner: false,
           routes: {
             '/home': (context) => HomePage(),

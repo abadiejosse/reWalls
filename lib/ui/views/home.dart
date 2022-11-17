@@ -1,4 +1,5 @@
 import 'package:provider/provider.dart';
+import 'package:re_walls/ui/views/maps.dart';
 import '../../ui/widgets/bottom_nav_bar.dart';
 import '../../core/utils/theme.dart';
 import 'search_page.dart';
@@ -37,7 +38,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: state.primaryColor,
         elevation: 0,
         title: Text(
-          'reWalls',
+          'StreetArtUY',
           style: state.textTheme.headline5,
         ),
         actions: <Widget>[
@@ -64,7 +65,8 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             MainBody(),
             Category(),
-            ForYou(),
+            MapSample(),
+            // ForYou(),
             SettingsPage(),
           ],
         ),
@@ -85,15 +87,19 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomNavyBarItem(
             icon: Icon(Icons.category),
-            title: Text('Subreddits'),
+            title: Text('Categorías'),
           ),
           BottomNavyBarItem(
-            icon: Icon(Icons.phone_android),
-            title: Text('Exact Fit'),
+            icon: Icon(Icons.map),
+            title: Text('Mapa'),
           ),
+          // BottomNavyBarItem(
+          //   icon: Icon(Icons.phone_android),
+          //   title: Text('Exact Fit'),
+          // ),
           BottomNavyBarItem(
             icon: Icon(Icons.settings),
-            title: Text('Settings'),
+            title: Text('Configuración'),
           ),
         ],
       ),
@@ -113,7 +119,8 @@ class _HomePageState extends State<HomePage> {
             ),
             actions: <Widget>[
               IconButton(
-                icon: Icon(Icons.search, color: state.accentColor),
+                icon: Icon(Icons.search,
+                    color: Theme.of(context).colorScheme.secondary),
                 onPressed: () {
                   showSearch(
                       context: context,
@@ -140,7 +147,8 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             MainBody(),
             Category(),
-            ForYou(),
+            MapSample(),
+            // ForYou(),
             SettingsPage(),
           ],
         ),
